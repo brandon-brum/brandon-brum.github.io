@@ -1,25 +1,18 @@
 
 import "./App.css";
-import Header from "./components/Header/Header.js";
-import selfPortrait from "./assets/portrait.jpg";
-import transitionShape from "./assets/transitionShape.svg"
-import logo from "./assets/logo.svg"
+import "./Content.css"
+import Header from "./components/Header/Header.js"
 
 function App() {
   return (
     <div className="App">
-      <header>
-        
-        <nav>
-          <a>HOME</a>
-          <div class='seperator'></div>
-          <a>MY WORK</a>
-          <img id="logo" src={logo}/>
-          <a>ABOUT</a>
-          <div class='seperator'></div>
-          <a>CONTACT</a>
-        </nav>
-      </header>
+      <Header/>
+      <main>
+        <section>
+          <h1>This is article header!</h1>
+          <p>We're gonna be talking about some random stuff in this article.</p>
+        </section>
+      </main>
     </div>
   );
 }

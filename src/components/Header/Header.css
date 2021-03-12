@@ -1,0 +1,100 @@
+header {
+    display:flex;
+    align-items: center;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    width:60vw;
+    height:40px;
+    line-height:40px;
+
+    background-color:var(--primary-color);
+    border:1px solid var(--secondary-color);
+    border-radius:1vw;
+    box-shadow: 0.1px 0.1px 3px var(--secondary-color);
+}
+
+nav a {
+    flex-grow:1;
+    height:inherit;
+
+    line-height:inherit;
+    
+    font-weight:bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+nav a:nth-child(2) {border-top-left-radius: inherit; border-bottom-left-radius: inherit;}
+nav a:last-child {border-top-right-radius: inherit; border-bottom-right-radius: inherit;}
+
+nav a:hover {
+    color:#222;
+    background:#DDD;
+
+    cursor: pointer;
+}
+
+.seperator {
+    height:35px;
+
+    border-right:1px groove var(--secondary-color);
+}
+
+#logo {
+    position:absolute;
+    left:50vw;
+    top:15px;
+    transform: translate(-50%,0);
+
+    height:50px;
+    width:50px;
+    box-shadow: 0px 0px 5px var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius:100vw;
+    
+    transition: transform 0s ease;
+}
+
+#logo:hover {
+    transform: translate(-50%, 0) rotate(720deg);
+    transition: transform 1s ease;
+}
+
+#mobileLogo {
+    display:none;
+    height:4vw;
+    width:4vw;
+    margin-left:10px;
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width:100vw;
+    }
+    #logo {
+        display:none;
+    }
+    #mobileLogo {
+        display:inline-block;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        height:60px;
+        line-height:60px;
+        
+        border-radius:0;
+    }
+    .seperator {
+        height:40px;
+
+        border-right:1px groove var(--secondary-color);
+    }
+    #mobileLogo {
+        display:none;
+    }
+}
