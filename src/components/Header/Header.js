@@ -7,14 +7,14 @@ function Header() {
         <header>
             <nav>
             <img id="mobileLogo" src={simpleLogo}/>
-            <a>HOME</a>
-            <div class='seperator'></div>
-            <a>MY WORK</a>
+            <a href="./index.html">HOME</a>
+            <div class="seperator"></div>
+            <a href="./index.html">MY WORK</a>
             <img id="logo" src={logo}/>
-            <div class='seperator'></div>
-            <a>ABOUT</a>
-            <div class='seperator'></div>
-            <a>CONTACT</a>
+            <div class="seperator"></div>
+            <a href="./index.html">ABOUT</a>
+            <div class="seperator"></div>
+            <a href="./index.html">CONTACT</a>
             </nav>
         </header>
     );
