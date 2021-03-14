@@ -1,14 +1,14 @@
 [
     {
         "name":"Project1",
-        "desc":"This is a project."
+        "desc":"This is an example project description."
     },
     {
         "name":"Project2",
-        "desc":"This is a project."
+        "desc":"This is an example project description."
     },
     {
         "name":"Project3",
-        "desc":"This is a project."
+        "desc":"This is an example project description."
     }
 ]

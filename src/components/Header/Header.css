@@ -69,6 +69,18 @@ nav a:hover {
     height:4vw;
     width:4vw;
     margin-left:10px;
+    transition: transform 0s ease;
+}
+
+#mobileLogo:hover {
+    transform: rotateY(720deg);
+    transition: transform 1s ease;
+}
+
+@media (prefers-color-scheme : dark) {
+    #mobileLogo {
+        filter:invert(1)
+    }
 }
 
 @media screen and (max-width: 1024px) {
