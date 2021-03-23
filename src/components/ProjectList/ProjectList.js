@@ -1,6 +1,7 @@
 import React from 'react';
 import projects from "./ProjectList.json";
 import './ProjectList.css';
+import '../../App.css';
 
 const cache = {};
 
@@ -8,8 +9,7 @@ function importAll(r) {
   r.keys().forEach((key) => (cache[key] = r(key).default));
 }
 
-importAll(require.context('../../assets/ProjectThumbnails', false))
-
+importAll(require.context('../../assets/ProjectThumbnails', false));
 
 class ProjectList extends React.Component {
     render() {
@@ -17,14 +17,16 @@ class ProjectList extends React.Component {
         for (let i = 0 ; i < this.props.displayCount ; i++) {
             let project = projects[i];
             if (typeof(project) == "object") {
-                project.imageSrc = project.imageSrc || "Unknown.png";
                 list.push(
                     <section className='project'>
                         <div className='projectInfo'>
-                            <h2>{project.name}</h2>
-                            <p>{project.desc}</p>
+                            <a href={project.href} target="_blank" rel="noopener noreferrer"><h2>{project.name}</h2></a>
+                            <p className='projectDescription'>{project.desc}</p>
+                            <ul className='techList'>
+                                {(project.tech || []).map (technology => <li>{technology}</li>)}
+                            </ul>
                         </div>
-                        <img className='ProjectThumbnail' src={cache[`./${project.imageSrc}`]}/> 
+                        <img className='ProjectThumbnail' src={cache[`./${project.imageSrc || "Unknown.png"}`]} alt={project.alt || ''}/> 
                     </section>);
             } else
                 break;

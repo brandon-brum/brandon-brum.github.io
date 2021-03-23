@@ -6,11 +6,11 @@ function Header() {
     return (
         <header>
             <nav>
-            <img id="mobileLogo" src={simpleLogo}/>
+            <img id="mobileLogo" src={simpleLogo} alt=""/>
             <a href="./index.html">HOME</a>
             <div class="seperator"></div>
             <a href="./index.html">MY WORK</a>
-            <img id="logo" src={logo}/>
+            <img id="logo" src={logo} alt=""/>
             <div class="seperator"></div>
             <a href="./index.html">ABOUT</a>
             <div class="seperator"></div>
