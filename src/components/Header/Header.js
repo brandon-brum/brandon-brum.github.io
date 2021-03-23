@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import "./Header.css";
 import logo from "../../assets/logo.svg"
 import simpleLogo from "../../assets/simpleLogo.svg"
@@ -7,14 +9,14 @@ function Header() {
         <header>
             <nav>
             <img id="mobileLogo" src={simpleLogo} alt=""/>
-            <a href="./index.html">HOME</a>
-            <div class="seperator"></div>
-            <a href="./index.html">MY WORK</a>
+            <Link to="/">HOME</Link>
+            <div className="seperator"></div>
+            <Link to="/work">MY WORK</Link>
             <img id="logo" src={logo} alt=""/>
-            <div class="seperator"></div>
-            <a href="./index.html">ABOUT</a>
-            <div class="seperator"></div>
-            <a href="./index.html">CONTACT</a>
+            <div className="seperator"></div>
+            <Link to="/about">ABOUT</Link>
+            <div className="seperator"></div>
+            <Link to="/contact">CONTACT</Link>
             </nav>
         </header>
     );
